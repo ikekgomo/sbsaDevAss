@@ -36,6 +36,10 @@ public class MaximumTipCalculator {
 		try{
 			int tenderedCash = new Scanner(System.in).nextInt();
 			if (tenderedCash == 0) System.exit(-1);
+			if (tenderedCash > 105) {
+				System.out.println("Sorry, 105 is the maxmimum");			
+				return readTestNumber();
+			}
 			return tenderedCash;
 		}catch(InputMismatchException ex){
 			System.out.println("Sorry, we only accept round interger figures.");
